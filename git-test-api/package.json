@@ -1,0 +1,32 @@
+{
+  "name": "git-test-api",
+  "version": "1.0.0",
+  "description": "Rest api to consume git hub webhooks and execute git hub apis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BunnyLand/git-test.git"
+  },
+  "keywords": [
+    "github",
+    "webhook",
+    "git",
+    "rest",
+    "api"
+  ],
+  "author": "rupendra sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BunnyLand/git-test/issues"
+  },
+  "homepage": "https://github.com/BunnyLand/git-test#readme",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "request": "^2.88.2"
+  }
+}
