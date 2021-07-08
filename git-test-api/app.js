@@ -17,10 +17,10 @@ var port = process.env.PORT || 8085;        // set our port
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-var token = 'Basic cnVwZW5kcmFfc2hhcm1hOmdocF9tZ3BJZDFiMWRhZVdISzZpYnZvMjdPOU5lSWgzaFkzTGwyM2s=';
-var acceptType = 'application/vnd.github.luke-cage-preview';
-var contentType = 'application/json';
-var user = 'rupendra-sharma';
+//var token = 'Basic <your oAuth token for GitHub api>';
+//var acceptType = 'application/vnd.github.luke-cage-preview';
+//var contentType = 'application/json';
+//var user = 'rupendra-sharma';
 /*
  * Receive GitHub webhook response
  * Execute repository protection usingGitHub repository api
@@ -36,7 +36,7 @@ router.route('/webhook-respnose')
 	var url = req.body.repository.url;
 	var masterBranch = req.body.master_branch
 	//var branchUrl = req.body.repository.branches_url;
-	var token = 'Basic cnVwZW5kcmFfc2hhcm1hOmdocF9tZ3BJZDFiMWRhZVdISzZpYnZvMjdPOU5lSWgzaFkzTGwyM2s=';
+	var token = 'Basic <your oAuth token for GitHub api>'';
 	var masterBranchUrl =  url + '/branches/' + masterBranch + '/protection';
 	
 	console.log("master branch url= " + masterBranchUrl);
@@ -113,6 +113,8 @@ router.route('/webhook-respnose')
 			console.log("create issue on repository and assign to self request: " + response.body);
 		    if (error) throw new Error(error);
 		    console.log(response.body);
+	   	    // send respnose
+		    res.json(response.body);
 		  });
 		  
 	  }
