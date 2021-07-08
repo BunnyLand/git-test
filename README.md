@@ -1,6 +1,6 @@
 # git-test
 Git repository containing the web service code for GitHub screening exercise - Part 2
-It is a REST api implemented using node.js + express.
+It is a REST api implemented using node.js + express. The api code is in the folder **git-test-api**
 
 Following use case are implemented:
 
